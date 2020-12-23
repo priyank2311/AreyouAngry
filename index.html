@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>SMASH COMPUTER</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="imstuck_computer.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="disable-dbl-tap-zoom">
+    <div id="secret-button" onclick="updateUI()"> </div>
+    <div class="keys">
+        <img id="img" src="images/hit1.svg" />
+        <div data-key="32" class="key">
+            <span class="sound score-box">hit score: <span id="hit-score"></span></span>
+        </div>
+        <br />
+        <p id="textbox" style="text-align: center;">Press space bar to start.</p>
+        <p id="textbox-mobile">Tap anywhere to start.</p>
+        <div style="margin: auto; display:flex; justify-content: center;">
+            <button id="throwaway" onclick="throwAway()"></button>
+        </div>
+        <br />
+        <div class="footer">
+            <p>Made with love <br/>Priyank Raj.</p>
+        </div>
+    </div>
+    <audio data-key="32" src="audio/slap.wav"></audio>
+    <audio id="slapSound">
+        <source src="audio/slap.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="shatterSound">
+        <source src="audio/shatter.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

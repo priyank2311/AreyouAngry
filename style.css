@@ -1,0 +1,162 @@
+html {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+}
+  
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.keys {
+  display: block;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.key {
+  margin: 0rem;
+  font-size: 1.2rem;
+  padding: .5rem ;
+  transition: all .07s ease;
+  text-align: center; 
+}
+
+.playing {
+  transform: scale(3);
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 30px;
+  text-transform: uppercase;
+  /* letter-spacing: .1rem; */
+  color: #ff1900;
+}
+
+#img {
+  display: flex;
+  justify-content: center;
+  width: 28rem;
+  margin: auto;
+  padding: 0 1rem 1rem 1rem;
+}
+.img-after {
+  display: none;
+  justify-content: center;
+  width: 50rem;
+  margin: auto;
+}
+.score-box {
+  text-align: center;
+}
+#button-mobile {
+  display: none;
+}
+
+#textbox {
+  font-size: 20px;
+}
+
+#textbox p {
+  margin-top: 0;
+}
+
+#textbox-mobile {
+  display: none;
+}
+
+#throwaway {
+  display: none;
+  text-align: center;
+  width: 20%;
+  min-width: 300px;
+  background-color: black;
+  color: white;
+  z-index: 4;
+  position: absolute;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#throwaway:hover {
+  opacity: 0.5;
+}
+
+.footer {
+  color:rgb(126, 126, 126); 
+  text-align:center; 
+  font-size: 15px;
+  padding-top: 1rem;
+  font-style: italic;
+  position: absolute;
+  bottom: 1.5rem;
+  margin: auto;
+  width: 100%;
+}
+
+  @media only screen and (max-width: 600px) {
+    /* disallow zoom on double-tap */
+    .disable-dbl-tap-zoom {
+      touch-action: manipulation;
+    }
+    /* body {
+      color: red;
+    } */
+    .sound {
+      font-size: 20px;
+      width: 40%;
+    }
+    #img {
+      max-width: 100%;
+      padding: 0;
+    }
+    #textbox {
+      display: none;
+    }
+
+    #textbox-mobile {
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+    #textbox-mobile p{
+      margin: .5rem auto;
+      margin-top: 0;
+    }
+    #throwaway {
+      width: unset;
+      min-width: unset;
+      margin-top: 1rem;
+      font-size: 20px;
+      padding: 5px 10px;
+    }
+    .footer {
+      padding-top: 2rem;
+      z-index:4;
+      font-size: 13px;
+      bottom: 1.5rem;
+    }
+    #secret-button {
+      z-index: 2;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+    
+  }
